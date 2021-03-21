@@ -1,0 +1,1 @@
+clear && javac HelloClassLoader.java && java HelloClassLoader
