@@ -13,7 +13,7 @@ public class NettyServerApplication {
         String proxyPort = System.getProperty("proxyPort", "8888");
 
         // 这是单个后端url的例子
-        String proxyServer = System.getProperty("proxyServers", "http://localhost:8808");
+        String proxyServer = System.getProperty("proxyServers", "http://localhost:8088/");
         int port = Integer.parseInt(proxyPort);
         System.out.println(GATEWAY_NAME + " " + GATEWAY_VERSION +" starting...");
         HttpInboundServer server = new HttpInboundServer(port, proxyServer);

@@ -22,7 +22,7 @@ public class OkHttpUtils {
 
     public static void main(String[] args) throws Exception {
 
-        String url = "http://localhost:8808"; // request BackendServer
+        String url = "http://localhost:8088"; // request BackendServer
         String text = OkHttpUtils.getAsString(url);
         System.out.println("url: " + url + " ; response: \n" + text);
 

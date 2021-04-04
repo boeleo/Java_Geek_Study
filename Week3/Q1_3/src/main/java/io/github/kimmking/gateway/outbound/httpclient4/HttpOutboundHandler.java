@@ -32,7 +32,7 @@ public class HttpOutboundHandler {
     }
     
     public void handle(final FullHttpRequest fullRequest, final ChannelHandlerContext ctx) {
-        final String url = this.backendUrl + fullRequest.uri();
+        final String url = this.backendUrl;
         FullHttpResponse response = null;
         try {
 			String body = OkHttpUtils.getAsString(url);

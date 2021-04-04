@@ -10,7 +10,7 @@ public class ProxyBizUriFilter implements HttpRequestFilter {
 	public void filter(FullHttpRequest fullRequest, ChannelHandlerContext ctx) {
 		String uri = fullRequest.uri();
 		System.out.println("filter gets request, uri: " + uri);
-		if (!uri.endsWith("hello")) {
+		if (!uri.startsWith("/hello")) {
 			throw new RuntimeException("Unsupported uri: " + uri);
 		}
 	}
