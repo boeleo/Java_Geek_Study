@@ -20,13 +20,13 @@ public class BackendServer {
                 executorService.execute(() -> service(socket));
             } catch (IOException e) {
                 e.printStackTrace();
+                serverSocket.close();
             }
         }
     }
 
     private static void service(Socket socket) {
         try {
-//            Thread.sleep(5);
             PrintWriter printWriter = new PrintWriter(socket.getOutputStream(), true);
             printWriter.println("HTTP/1.1 200 OK");
             printWriter.println("Content-Type:text/html;charset=utf-8");
