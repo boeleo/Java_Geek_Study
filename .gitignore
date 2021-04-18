@@ -28,4 +28,9 @@ classes/
 target/
 build/
 
+# Eclipse project files
+.classpath
+.project
+.settings
+
 .DS_Store
