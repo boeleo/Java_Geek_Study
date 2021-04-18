@@ -15,20 +15,20 @@ public class CallableImpl implements Callable<Integer> {
 
 	public Integer call() throws Exception {
 		long start = System.currentTimeMillis();
-        int result = sum(); //这是得到的返回值
-        System.out.println(this.name + " 使用时间："+ (System.currentTimeMillis()-start) + " ms");
-        this.latch.countDown();
-        return result;
+		int result = sum(); //这是得到的返回值
+		System.out.println(this.name + " 使用时间："+ (System.currentTimeMillis()-start) + " ms");
+		this.latch.countDown();
+		return result;
 	}
 	
 	private static int sum() {
-        return fibo(36);
-    }
-    
-    private static int fibo(int a) {
-        if ( a < 2) 
-            return 1;
-        return fibo(a-1) + fibo(a-2);
-    }
+		return fibo(36);
+	}
+	
+	private static int fibo(int a) {
+		if ( a < 2) 
+			return 1;
+		return fibo(a-1) + fibo(a-2);
+	}
 
 }
